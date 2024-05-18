@@ -1,1 +1,4 @@
-A simple landing page - first designed in figma and then coded in React. Hope you like it."# esic" 
+landing page.
+npm install
+npm run dev
+link:(couldnt deploy due to network error)
