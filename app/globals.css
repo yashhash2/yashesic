@@ -1,0 +1,231 @@
+/* Reset and box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color palette */
+:root {
+  --primary-color: #3498db; /* Primary blue color */
+  --secondary-color: #2ecc71; /* Secondary green color */
+  --background-color: #f9f9f9; /* Light grey background */
+  --text-color: #333; /* Dark grey text */
+  --header-footer-background: #1abc9c; /* Teal background for header and footer */
+  --header-footer-text: white; /* White text for header and footer */
+  --card-background: white; /* White background for cards */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* Shadow for cards */
+  --card-hover-shadow: rgba(0, 0, 0, 0.2); /* Shadow for cards on hover */
+}
+
+/* Body styles */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+  gap: 14px;
+}
+
+/* Container styles for header, main, and footer */
+header,
+main,
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  background: var(--card-background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--header-footer-background);
+  color: var(--header-footer-text);
+  border-radius: 10px 10px 0 0;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/* Main styles */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Posts container styles */
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+  
+}
+
+.postCard {
+  padding: 20px;
+  background: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #150ab1;
+  color: rgb(10, 245, 10);
+  
+}
+
+.postCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--card-hover-shadow);
+  background-color: #CC2E89;
+}
+
+.postCard > p {
+  flex: 1;
+  color: #475569;
+}
+
+/* Stats container styles */
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Unstyled links */
+.unstyled {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Article styles */
+article div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+article div ul {
+  list-style-position: inside;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--header-footer-background);
+  color: var(--header-footer-text);
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer a {
+  color: var(--header-footer-text);
+  text-decoration: underline;
+  margin: 0 4px;
+}
+
+footer a:hover {
+  color: #ffdeeb;
+}
+
+/* Media query for larger screens */
+@media (min-width: 640px) {
+  body {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .postsContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .postCard {
+    padding: 24px;
+  }
+ /* SearchView container styles */
+.search-view-container {
+  padding: 20px;
+  width: 11000;
+  background-color: #b0fac0;
+}
+
+/* SearchBar container styles */
+.searchbar {
+  margin-bottom: 20px;
+  
+}
+
+/* Posts container styles */
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  
+}
+
+/* Responsive design for post cards */
+.postCard {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Title styles inside post cards */
+.postCard h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Description styles inside post cards */
+.postCard p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Hover effect for post cards */
+.postCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.sb{
+
+  
+}
+.search-input {
+  width: 100%; /* Make the search input fill the container */
+  padding: 12px 20px; /* Increase padding for better spacing */
+  font-size: 16px; /* Adjust font size */
+  border: 2px solid #3498db; /* Border style */
+  border-radius: 25px; /* Border radius for rounded corners */
+  outline: none; /* Remove outline */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+}
